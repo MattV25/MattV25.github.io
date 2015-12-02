@@ -1,7 +1,146 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
 <body>
-<h1>Hello World</h1>
-
+  <!-- Navbar Section !-->
+  <nav class = "navbar navbar-inverse navbar-fixed-top">
+    <div class = "container-fluid">
+      <div class = "navbar-header">
+        <button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#navigate">
+          <span class = "sr-only"></span>
+          <span class = "icon-bar"></span>
+          <span class = "icon-bar"></span>
+          <span class = "icon-bar"></span> 
+        </button>
+        <a class = "navbar-brand" href = "#Home"> Matthew Vandiver</a>
+      </div>
+      <div class = "collapse navbar-collapse" id = "navigate">
+        <ul class = "nav navbar-nav navbar-right">
+          <li class = "active"><a href = "#Home"> Home </a></li>
+          <li><a href = "#About"> About </a></li>
+          <li><a href = "#Portfolio"> Portfolio </a></li>
+          <li><a href = "#Contact"> Contact </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Home Section !-->
+  <section id = "Home">
+    <div class = "home-format">
+      <div class = "container">
+        <div class = "row">
+          <div class = "col-lg-12">
+            <div class = "greeting">
+              <h1> Personal Portfolio Page </h1>
+              <hr class = "seperator">
+              <h3> Project for FCC by Matthew Vandiver </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Section !-->
+  <section id = "About">
+    <div class = "about-me">
+      <div class = "container">
+        <div class = "row">
+          <div class = "col-lg-12">
+            <h1> About Myself</h1>
+            <hr class = "seperator-about">
+            <div class = "row">
+              <div class = "col-md-6">
+                <p> I was born and raised in the Jackson, Mississippi area. </br> 
+                    I'm a graduate of Mississippi State University with a degree in Business Information Systems. </br> 
+                    I'm currently still seeking an opportunity to get started in my field and enjoy researching and 
+                    trying to learn new technologies to further that goal. </br> 
+                    Languages: Currently working on Java, ASP.net, HTML5, CSS, and Javascript as well as progressing with Free Code Camp.
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Portfolio Section !-->
+  <section id = "Portfolio">
+    <div class = "portfolio">
+      <div class = "container">
+        <div class = "row">
+          <div class = "col-lg-12">
+            <h1> Portfolio </h1>
+            <h3> Below are upcoming projects: </h3>
+            <hr class = "seperator">
+          </div>
+        </div>
+        <div class = "row">
+          <!-- Portfolio Item 1 !-->
+          <div class = "col-md-4 col-sm-4 col-xs-4 port-item">
+            <div class = "panel">
+              <a href = "http://codepen.io/MattV25/full/PPMWeq/" target = "_blank" class = "link">
+              <img class = "img-responsive" src = "http://i12.photobucket.com/albums/a201/MattV1056/screencapture-codepen-io-MattV25-full-PPMWeq-1448942135512_zpsidyjhakv.png" alt = "Quote Generator">
+            </a>
+              <div class = "panel-footer">
+                <h4 class = "port-desc"> Random Quote Generator </h4>
+                <h5 class = "port-desc"> Generates a random quote when the button is clicked </h5>
+              </div>
+            </div>
+          </div>
+          <!-- Portfolio Item 2 !-->
+          <div class = "col-md-4 col-sm-4 col-xs-4 port-item">
+            <div class = "panel"> 
+            <a href = "#" target = "_blank" class = "link">
+              <img class = "img-responsive" src = "http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png" alt = "placeholder">
+            </a>
+            <div class = "panel-footer">
+              <h4 class = "port-desc"> Title </h4>
+              <h5 class = "port-desc"> Description </h5>
+            </div>
+          </div>
+        </div>
+          <!-- Portfolio Item 3 !-->
+          <div class = "col-md-4 col-sm-4 col-xs-4 port-item">
+            <div class = "panel">
+            <a href = "#" target = "_blank" class = "link">
+              <img class = "img-responsive" src = "http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png" alt = "placeholder">
+            </a>
+            <div class = "panel-footer">
+              <h4 class = "port-desc"> Title </h4>
+              <h5 class = "port-desc"> Description </h5>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+   <!-- Contact Section !--> 
+  <section id = "Contact">
+    <div class = "contact">
+      <div class = "container">
+        <div class = "row">
+          <div class = "col-lg-12">
+            <h1> Contact Information </h1>
+            <h3><i class = "fa fa-envelope"></i><span> mjvandiver23@gmail.com </span></h3>
+            <hr class = "seperator"></hr>
+            <ul class = "list-inline buttons">
+              <li>
+                <a href = "https://github.com/MattV25" target = "_blank" class = "btn btn-default btn-lg"><i class = "fa fa-github"></i><span> Github </span></a>
+              </li>
+              <li>
+                <a href = "https://www.facebook.com/matthew.j.vandiver" target = "_blank" class = "btn btn-default btn-lg"><i class = "fa fa-facebook"></i><span> Facebook </span></a>
+              </li>
+              <li>
+                <a href = "https://www.linkedin.com/in/matthew-vandiver-701b52100" target = "_blank" class = "btn btn-default btn-lg"><i class = "fa fa-linkedin"></i><span> LinkedIn </span></a>
+              </li>
+              <li>
+                <a href = "http://www.freecodecamp.com/mattv25" target = "_blank" class = "btn btn-default btn-lg"><i class = "fa fa-fire"></i><span> freeCodeCamp </span></a>
+              </li>
+          </ul>
+        </div>
+       </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
