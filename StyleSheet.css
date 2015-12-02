@@ -1,2 +1,123 @@
-body {
+
+html, body
+{
+  height: 100%;
+  width: 100%;
 }
+h1, h2, h3
+{
+  text-align: center;
+}
+/* Home Section */
+.home-format
+{
+  padding: 50px 0px;
+  height: 700px;
+  background: url("http://www.dreamscraper.com/wp-content/uploads/2014/06/bg.jpg") center center fixed no-repeat;
+  background-size: cover;
+}
+.greeting 
+{
+  position: relative;
+  padding: 175px;
+}
+.greeting > h1
+{
+  font-size: 2.5em;
+  text-shadow: 1px 1px 1px;
+  text-align: center;
+}
+/* About Me Section */
+.about-me
+{
+  background: url("http://cache.desktopnexus.com/thumbseg/1163/1163686-bigthumbnail.jpg") center center fixed no-repeat;
+  background-size: cover;
+  height: 700px;
+  padding: 50px 0px;
+}
+.about-me h1
+{
+  font-size: 2.5em;
+  color: white;
+  text-shadow: 1px 1px 1px;
+}
+.about-me p
+{
+  font-size: 1.5em;
+  color: white;
+}
+.seperator-about
+{
+  max-width: 1200px;
+  border-top: solid 4px white;
+}
+/* Portfolio Section */
+.portfolio
+{
+  height: 855px;
+  background: url('http://oneofakindwalls.com/wp-content/uploads/2013/09/walls1.jpg') center center fixed no-repeat;
+  background-size: cover;
+  padding: 50px 0;
+}
+.port-desc
+{
+  text-align: center;
+  margin: auto;
+  color: silver;
+}
+#Portfolio img
+{
+  margin: auto;
+  width: 100%;
+}
+#Portfolio h1
+{
+  text-shadow: 1px 1px 1px;
+}
+.panel
+{
+  background-color: black;
+  border: 20px outset transparent;
+  -webkit-border-image: url("http://www.hospitalart.ca/frameborder.gif") 30 round;
+  -o-border-image: url("http://www.hospitalart.ca/frameborder.gif") 30 round;
+  border-image: url("http://www.hospitalart.ca/frameborder.gif") 30 round;
+  margin: auto;
+}
+.panel-footer
+{
+  background-color: black;
+}
+.seperator
+{
+  max-width: 1200px;
+  border-top: solid 5px;
+}
+/* Contact Section */
+.contact
+{
+  height: 600px;
+  background: url("http://cache.desktopnexus.com/cropped-wallpapers/968/968290-1366x768-[DesktopNexus.com].jpg?st=ugt2HkYp33HbbX5gYQhrrA&e=1448206309") center center fixed no-repeat;
+  background-size: cover;
+  padding: 50px 0px;
+}
+#Contact ul
+{
+  text-align: center;
+  padding: 100px;
+}
+#Contact .btn
+{
+  display: inline-block;
+  box-shadow: 4px 4px 4px;
+}
+#Contact h1
+{
+  text-shadow: 1px 1px 1px;
+  color: black;
+}
+#Contact h3
+{
+  color: black;
+}
+ 
+
