@@ -81,7 +81,7 @@ h1, h2, h3
   -webkit-border-image: url("http://www.hospitalart.ca/frameborder.gif") 29 50 55 32  fill round round;
   -o-border-image: url("http://www.hospitalart.ca/frameborder.gif") 29 50 55 32  fill round round;
   -moz-border-image: url("http://www.hospitalart.ca/frameborder.gif") 29 50 55 32  fill round round;
-  border-image: url(http://www.hospitalart.ca/frameborder.gif) 29 50 55 32  fill round round;
+  border-image: url("http://www.hospitalart.ca/frameborder.gif") 29 50 55 32  fill round round;
   
 }
 .panel-footer
