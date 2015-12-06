@@ -74,17 +74,16 @@ h1, h2, h3
 {
   text-shadow: 1px 1px 1px;
 }
-.panel
+.port-item .panel
 {
-  border-width: 29px 50px 55px 32px;
-  border-style: solid;
-  -webkit-border-image: url("http://www.hospitalart.ca/frameborder.gif") 29 50 55 32  fill round round;
-  -o-border-image: url("http://www.hospitalart.ca/frameborder.gif") 29 50 55 32  fill round round;
-  -moz-border-image: url("http://www.hospitalart.ca/frameborder.gif") 29 50 55 32  fill round round;
-  border-image: url(http://www.hospitalart.ca/frameborder.gif) 29 50 55 32  fill round round;
-  
+  background-color: black;
+  border: 20px outset transparent;
+  -webkit-border-image: url("http://www.hospitalart.ca/frameborder.gif") 30 round;
+  -o-border-image: url("http://www.hospitalart.ca/frameborder.gif") 30 round;
+  border-image: url("http://www.hospitalart.ca/frameborder.gif") 30 round;
+  margin: auto;
 }
-.panel-footer
+.port-item .panel-footer
 {
   background-color: black;
 }
