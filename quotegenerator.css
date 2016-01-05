@@ -1,0 +1,68 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+body
+{
+  background: url("http://images.all-free-download.com/images/graphiclarge/wooden_background_209763.jpg") center center fixed no-repeat;
+  background-size: cover;
+  height: auto;
+}
+
+.heading {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  font-family: "lucida calligraphy", sans-serif;
+}
+@media screen and (max-width: 768px) 
+{
+  .getquote .quote{font-size: 12px;}
+  .getquote .author{font-size: 10px;}
+}
+
+.getquote {
+  position: relative;
+  height: 50%;
+  width: 50%;
+  margin: auto;
+}
+
+.quote {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  font-family: "lucida calligraphy", sans-serif;
+  font-size: 18px;
+}
+
+.author {
+  position: absolute;
+  top: 250px;
+  left 0;
+  width: 100%;
+  font-family: "lucida calligraphy", sans-serif;
+}
+.scrollimg 
+{
+  top:  100px;
+  left: 10%;
+  position: absolute;
+  width: 80%;
+  height: 50%;
+  border: 2px solid black;
+  margin: auto;
+  background: url("http://www.clipartbest.com/cliparts/9cp/oMb/9cpoMbnoi.gif") center center fixed;
+}
+
+.btnspace {
+  padding-top: 280px;
+  text-align: center;
+}
+
+.btnquote {
+  background: url("http://images.all-free-download.com/images/graphiclarge/old_paper_background_hd_picture_2_169574.jpg");
+}

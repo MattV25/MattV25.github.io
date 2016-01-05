@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Pomodoro Clock</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="pomodoro.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css"></script>
+    </head>
+<body>
+<!-- Heading !-->
+<section>
+    <audio id = "alarm"><source src = "http://soundbible.com/grab.php?id=1249&type=mp3"></audio>
+    <div class = "row">
+        <div class = "col-lg-12 col-xs-12">
+            <h1> Pomodoro Clock </h1>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-lg-12 col-xs-12 fcc">
+            <h3><i class = "fa fa-fire"></i> Free Code Camp <i class = "fa fa-fire"></i></h3> 
+            <p id = "alerttext"></p>
+        </div>
+    </div>
+</section>
+<section>
+  <div class = "container-fluid sessionblock">
+    <!-- Session Area !-->
+    <div class = "row">
+      <div class = "sessionrow col-lg-6 col-xs-6">
+        <h4> Session </h4>
+        <button type = "button" class = "btn btn-lg" id = "sessionplus"><i class = "fa fa-plus"></i></button>
+        <span id = "sessioninc"></span>:00
+        <button type = "button" class = "btn btn-lg" id = "sessionminus"><i class = "fa fa-minus"></i></button>
+      </div>
+      <!-- Break Area !-->
+      <div class = "breakrow col-lg-6 col-xs-6">
+        <h4> Break </h4>
+        <button type = "button" class = "btn btn-lg" id = "breakplus"><i class = "fa fa-plus"></i></button>
+        <span id = "breakinc"></span>:00
+        <button type = "button" class = "btn btn-lg" id = "breakminus"><i class = "fa fa-minus"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Timer Area !-->
+<section>
+  <div id = "circle">
+      <div class = "timer">
+        <div id = "timebox">
+        </div>
+      </div>
+  </div>
+  <div class = "row buttonset">
+      <button type = "button" class = "btn btn-sm" id = "Start"> Start </button>
+      <button type = "button" class = "btn btn-sm" id = "Pause" > Pause </button>
+      <button type = "button" class = "btn btn-sm" id = "Reset"> Reset </button>
+    </div>
+</section>
+</body>
+</html>
+<script>
+$sessiontime = $("#sessioninc");
+$breaktime = $("#breakinc");
+
+$("#sessionplus").click(function()
+{
+  $sessiontime.text(+$sessiontime.text() + 1);
+})
+$("#sessionminus").click(function()
+{
+  if (+$sessiontime.text() > 0) 
+  {
+    $sessiontime.text(+$sessiontime.text() - 1);
+  }
+})
+$("#breakplus").click(function()
+{
+  $breaktime.text(+$breaktime.text() + 1);
+})
+$("#breakminus").click(function()
+{
+  if (+$breaktime.text() > 0) 
+  {
+    $breaktime.text(+$breaktime.text() - 1);
+  }
+})
+
+var inputtime = document.getElementById('timebox');
+
+function getTime(time) 
+{
+  var minutes = Math.floor(time / 60);
+  time = time - (minutes * 60);
+  var seconds = Math.floor(time);
+  if(seconds < 10)
+  {
+    seconds = "0" + seconds;
+  }  
+  inputtime.innerHTML = minutes + ':' + seconds;
+}
+
+function updateTime() 
+{
+  if (time <= 0)
+  {
+    return;
+  }
+  var newTime = new Date().getTime(time);
+  var timing = ((newTime - oldTime) / 1000);
+  oldTime = newTime;
+  time = time - timing;
+ 
+  if (time <= 0) 
+  {
+      time = $breaktime.text() * 60;
+      document.getElementById("alarm").play();
+      document.getElementById("circle").style.borderColor = "red";
+      document.getElementById("alerttext").innerHTML = "Break Going";
+      document.getElementById("alerttext").style.color = "red";
+  }
+  getTime(time);
+  if (ticking) 
+  {
+    requestAnimationFrame(updateTime);
+  }
+}
+
+$("#Start").click(function()
+{
+  if (time <= 0) 
+  {
+    time = $sessiontime.text() * 60;
+    document.getElementById("circle").style.borderColor = "green";
+    document.getElementById("alerttext").innerHTML = "Session Going";
+    document.getElementById("alerttext").style.color = "green";
+  }
+  oldTime = new Date().getTime();
+  ticking = true;
+  requestAnimationFrame(updateTime);
+})
+
+$("#Pause").click(function()
+{
+  ticking = false;
+});
+
+function reset() 
+{
+  ticking = false;
+  time = 0;
+  inputtime.innerHTML = '25:00';
+  $("#sessioninc").text(25);
+  $("#breakinc").text(5);
+  $("#alerttext").text("");
+  document.getElementById("circle").style.borderColor = "silver";
+}
+
+document.getElementById("Reset").onclick = reset;
+document.onload = reset();
+
+</script>

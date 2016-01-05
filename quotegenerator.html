@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="quotegenerator.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css"></script>
+</head>
+
+<body>
+<section>
+    <div class = "heading col-lg-12">
+        <h1> Random Quote Generator </h1>
+    </div>
+</section>
+<section>
+    <div class = "scrollimg">
+        
+    <div class = "getquote">
+        <p><span class = "quote"></span></p>
+        <span class = "author"></span>
+        <div class = "btnspace">
+            <button type = "btn btn-primary" class = "btnquote"><i class= "fa fa-pencil"></i> New Quote </button>
+            <a class = "sharebtn" href = "https://twitter.com/intent/tweet" target = "_blank">
+                <button type = "btn btn-primary" class = "btnquote"><i class="fa fa-twitter"></i> Share </button>
+            </a>
+        </div>
+    </div>
+   </div>
+</section>
+</body>
+</html>
+<script>
+function getQuote()
+{
+  $.ajax(
+  {
+    url: "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?",
+    dataType: "jsonp",
+    jsonp: "jsonp",
+    jsonpCallback: "parseQuote"
+  });
+}
+
+function parseQuote(get)
+{
+  $('.quote').text(get.quoteText);
+  var tweetit = "https://twitter.com/intent/tweet?text=" + get.quoteText + " --- " + get.quoteAuthor;
+  if (get.quoteAuthor === '') 
+  {
+    get.quoteAuthor = 'Unknown';
+  }
+  $('.author').text("---  " + get.quoteAuthor);
+  $('.sharebtn').attr("href", tweetit);
+}
+$(document).ready(function()
+{
+  getQuote();
+  $(".btnquote").click(getQuote);
+});
+</script>
