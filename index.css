@@ -82,10 +82,6 @@ h1, h2, h3
   -o-border-image: url("http://www.hospitalart.ca/frameborder.gif") 30 round;
   border-image: url("http://www.hospitalart.ca/frameborder.gif") 30 round;
   margin: auto;
-<<<<<<< HEAD:index.css
-=======
-  
->>>>>>> ef4768d7b1af033ab0a7f725b800eaa4b793dab8:StyleSheet.css
 }
 .port-item .panel-footer
 {
