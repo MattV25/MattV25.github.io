@@ -2,15 +2,15 @@ html, body
 {
   height: 100%;
   width: 100%;
-  font-family: Papyrus;
 }
 body
 {
   background: url("http://www.cuded.com/wp-content/uploads/2013/06/8-Black-Background.jpg") fixed no-repeat;
   background-size: cover;
   height: 700px;
+  font-family: Papyrus !important;
 }
-h1
+div h1
 {
   text-align: center;
   text-shadow: 3px 3px 3px gray;
@@ -23,6 +23,7 @@ h1
   color: silver;
   text-shadow: 3px 3px 3px gray;
   padding-bottom: 75px;
+  font-family: Papyrus;
 }
 .fcc i
 {
